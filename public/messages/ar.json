@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "logo": "الشعار",
+    "charity_projects": "مشاريع الخير",
+    "donation_methods": "طرق التبرع",
+    "sections": "الأقسام",
+    "section1": "القسم الأول",
+    "section2": "القسم الثاني",
+    "about_us": "من نحن",
+    "about_page": "عن المؤسسة",
+    "contact_us": "اتصل بنا",
+    "search_placeholder": "بحث...",
+    "login": "تسجيل الدخول",
+    "login_description": "أدخل بياناتك لتسجيل الدخول إلى حسابك.",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "menu": "القائمة"
+  },
+  "home": {
+    "hero": {
+      "bismillah": "بسم الله الرحمن الرحيم",
+      "verse": "مَثَلُ الَّذِينَ يُنْفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ كَمَثَلِ حَبَّةٍ أَنْبَتَتْ سَبْعَ سَنَابِلَ فِي كُلِّ سُنْبُلَةٍ مِائَةُ حَبَّةٍ وَاللَّهُ يُضَاعِفُ لِمَنْ يَشَاءُ وَاللَّهُ وَاسِعٌ عَلِيمٌ",
+      "donate_button": "سجل و تبرع",
+      "browse_projects_button": "تصفح المشاريع"
+    },
+    "stats": {
+      "transparency_label": "شفافية",
+      "transparency_text": "تامة و موثقة",
+      "donation_methods_label": "15 باب",
+      "donation_methods_text": "مختلف للتبرع",
+      "charities_label": "أكثر من",
+      "charities_text": "50 جمعية",
+      "projects_label": "152",
+      "projects_text": "مشروع جاري"
+    },
+    "charities": {
+      "title_part1": "الجمعيات",
+      "title_part2": "الخيرية",
+      "subtitle": "الجمعيات الخيرية المسجلة لدينا على موقعنا"
+    },
+    "projects": {
+      "title_part1": "المشاريع",
+      "title_part2": "الحالية",
+      "view_all": "كل المشاريع",
+      "from": "من",
+      "currency": "جنية",
+      "categories": {
+        "all": "الكل",
+        "food": "الإطعام",
+        "health": "الصحة",
+        "marriage": "الزواج",
+        "charity": "صدقة جارية"
+      },
+      "project1": {
+        "title": "حملة إطعام رمضان للأسر في الريف و الصعيد المصري."
+      },
+      "project2": {
+        "title": "حملة علاج المرضى غير القادرين"
+      },
+      "project3": {
+        "title": "دعم زواج الشباب"
+      },
+      "project4": {
+        "title": "بناء مسجد في قرية نائية"
+      },
+      "charities": {
+        "resala": "جمعية رسالة",
+        "orman": "جمعية الأورمان",
+        "mek": "مؤسسة مصر الخير",
+        "mersal": "مؤسسة مرسال"
+      }
+    }
+  },
+  "footer": {
+    "all_rights_reserved": "جميع الحقوق محفوظة لموقع مبيت ثواب",
+    "tax_id": "الرقم الضريبي",
+    "site_name": ""
+  }
+}
