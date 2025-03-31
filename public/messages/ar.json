@@ -14,7 +14,9 @@
     "login_description": "أدخل بياناتك لتسجيل الدخول إلى حسابك.",
     "username": "اسم المستخدم",
     "password": "كلمة المرور",
-    "menu": "القائمة"
+    "menu": "القائمة",
+    "register": "تبرع",
+    "register_description": "أنشئ حساباً جديداً للوصول إلى جميع الميزات."
   },
   "home": {
     "hero": {
@@ -72,7 +74,7 @@
     }
   },
   "footer": {
-    "all_rights_reserved": "جميع الحقوق محفوظة لموقع مبيت ثواب",
+    "all_rights_reserved": "جميع الحقوق محفوظة لموقع وابل",
     "tax_id": "الرقم الضريبي",
     "site_name": ""
   }

@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Almarai } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import localFont from "next/font/local";
+
+const vipHala = localFont({
+  src: "../public/fonts/VIP Hala Bold VIP Hala Bold.otf",
+  variable: "--font-vip-hala",
+  display: "swap",
+});
 
 const almarai = Almarai({
   weight: ["300", "400", "700", "800"],
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${almarai.variable} font-almarai antialiased`}
+        className={`${vipHala.variable} ${geistSans.variable} ${geistMono.variable} ${almarai.variable} font-almarai antialiased`}
       >
         <ThemeProvider
           attribute="class"

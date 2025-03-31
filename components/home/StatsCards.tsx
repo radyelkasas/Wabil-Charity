@@ -1,10 +1,15 @@
 "use client";
 
-import {  useRef } from "react";
+import { useRef, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { useInView } from "framer-motion";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
+
+// استيراد مكون LottieIcon بشكل ديناميكي مع تأخير تحميله حتى يصبح مرئيًا
+const LottieIcon = dynamic(() => import("./LottieIcon"), {
+  ssr: false,
+});
 
 const StatCard = ({
   icon,
@@ -37,14 +42,20 @@ const StatCard = ({
         transitionDelay: `${index * 100}ms`,
       }}
     >
-      <div className="mb-3">
-        <Image
-          src={icon}
-          alt={label}
-          width={60}
-          height={60}
-          className="w-15 h-15 object-contain"
-        />
+      <div
+        className="mb-3 flex items-center justify-center"
+        style={{ minHeight: "60px" }}
+      >
+        {/* تحميل الأيقونة فقط عندما تكون في مجال الرؤية */}
+        {isInView && (
+          <LottieIcon
+            src={icon}
+            color={color}
+            width={80}
+            height={80}
+            className="w-15 h-15 object-contain"
+          />
+        )}
       </div>
       <div className="text-center">
         <div className="flex items-center justify-center gap-2">
@@ -117,43 +128,47 @@ const StatsCards = () => {
   const pathname = usePathname();
   const locale = pathname.startsWith("/en") ? "en" : "ar";
 
-  const stats = [
-    {
-      icon: "/media/transparency-icon.svg",
-      number: t("transparency_label"),
-      label: t("transparency_label"),
-      textLabel: t("transparency_text"),
-      color: "#28A6AC",
-    },
-    {
-      icon: "/media/donation-icon.svg",
-      number: 15,
-      label: t("donation_methods_label"),
-      textLabel: t("donation_methods_text"),
-      color: "#F0A500",
-    },
-    {
-      icon: "/media/charity-icon.svg",
-      number: 50,
-      label: t("charities_label"),
-      textLabel: t("charities_text"),
-      color: "#E94D8B",
-    },
-    {
-      icon: "/media/project-icon.svg",
-      number: 152,
-      label: t("projects_label"),
-      textLabel: t("projects_text"),
-      color: "#28A6AC",
-    },
-  ];
+  // استخدام useMemo لمنع إعادة إنشاء مصفوفة الإحصائيات عند كل عملية تصيير
+  const stats = useMemo(
+    () => [
+      {
+        icon: "/media/icons/transparency-icon.json",
+        number: t("transparency_label"),
+        label: t("transparency_label"),
+        textLabel: t("transparency_text"),
+        color: "#28A6AC",
+      },
+      {
+        icon: "/media/icons/donation-icon.json",
+        number: 15,
+        label: t("donation_methods_label"),
+        textLabel: t("donation_methods_text"),
+        color: "#F0A500",
+      },
+      {
+        icon: "/media/icons/charity-icon.json",
+        number: 50,
+        label: t("charities_label"),
+        textLabel: t("charities_text"),
+        color: "#E94D8B",
+      },
+      {
+        icon: "/media/icons/project-icon.json",
+        number: 152,
+        label: t("projects_label"),
+        textLabel: t("projects_text"),
+        color: "#28A6AC",
+      },
+    ],
+    [t]
+  ); // إعادة الحساب فقط عندما تتغير الترجمات
 
   return (
     <section className="relative -mt-16 z-10 container mx-auto px-4 py-2">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
           <StatCard
-            key={index}
+            key={`stat-card-${index}`}
             icon={stat.icon}
             number={stat.number}
             label={stat.label}

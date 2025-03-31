@@ -17,7 +17,9 @@ declare const messages: {
     "login_description": "Enter your credentials to access your account.",
     "username": "Username",
     "password": "Password",
-    "menu": "Menu"
+    "menu": "Menu",
+    "register": "Donate",
+    "register_description": "Create a new account to access all features."
   },
   "home": {
     "hero": {
@@ -75,7 +77,7 @@ declare const messages: {
     }
   },
   "footer": {
-    "all_rights_reserved": "All rights reserved to Mabit Thawab",
+    "all_rights_reserved": "All rights reserved to Wabel",
     "tax_id": "Tax ID",
     "site_name": ""
   }

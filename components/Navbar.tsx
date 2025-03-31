@@ -1,4 +1,3 @@
-// Navbar.jsx
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ModeToggle } from "./ui/ModeToggle";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { Search, Menu } from "lucide-react";
+import { Search, Menu, HeartHandshake } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -54,16 +53,13 @@ export default function Navbar() {
 
         {/* Desktop Navigation - only visible on medium screens and above */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="/projects">
-            <Button>{t("charity_projects")}</Button>
-          </Link>
-          <Link href="/donate">
-            <Button>{t("donation_methods")}</Button>
-          </Link>
+          <Link href="/projects">{t("charity_projects")}</Link>
+          <Link href="/donate">{t("donation_methods")}</Link>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>{t("sections")}</NavigationMenuTrigger>
+
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px]">
                     <li>
@@ -127,13 +123,13 @@ export default function Navbar() {
         {/* Right Side */}
         <div className="flex items-center gap-4">
           {/* Search Box */}
-          <div className="hidden md:flex items-center bg-gray-100 dark:bg-gray-800 rounded-full px-3 py-1">
+          <div className="hidden md:flex items-center  border-secondary border-2 bg-gray-100 dark:bg-gray-800 rounded-full px-3 py-1">
             <input
               type="text"
               placeholder={t("search_placeholder")}
-              className="bg-transparent border-none outline-none text-sm text-gray-700 dark:text-gray-200 w-32 ml-2 text-right rtl:text-right ltr:text-left"
+              className="bg-transparent border-none outline-none text-sm dark:text-gray-200 w-32 ml-2 text-right rtl:text-right ltr:text-left"
             />
-            <Search className="h-4 w-4 text-gray-500 dark:text-gray-400" />
+            <Search className="h-4 w-4 text-secondary dark:text-secondary/20" />
           </div>
 
           {/* Theme Switcher */}
@@ -184,6 +180,52 @@ export default function Navbar() {
             </DialogContent>
           </Dialog>
 
+          {/* Register Button */}
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="hidden md:flex bg-secondary hover:bg-secondary/80 text-xl">
+                {t("register")}
+                <HeartHandshake
+                  size={40}
+                  strokeWidth={1.75}
+                  className="mX-2 text-2xl"
+                />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>
+                  <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+                    {t("register")}
+                  </h2>
+                </DialogTitle>
+                <DialogDescription>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {t("register_description")}
+                  </p>
+                </DialogDescription>
+              </DialogHeader>
+              <div className="grid gap-4 py-4">
+                <div className="flex flex-col items-start justify-between gap-4">
+                  <Label htmlFor="username" className="text-right">
+                    {t("username")}
+                  </Label>
+                  <Input id="username" className="col-span-3" />
+                </div>
+                <div className="flex flex-col items-start justify-between gap-4">
+                  <Label htmlFor="password" className="text-right">
+                    {t("password")}
+                  </Label>
+                  <Input id="password" type="password" className="col-span-3" />
+                </div>
+              </div>
+              <DialogFooter>
+                <Button className="w-full" type="submit">
+                  {t("register")}
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
           {/* Mobile Menu - Using Sheet from your original code */}
           <div className="md:hidden">
             <Sheet>
@@ -207,13 +249,13 @@ export default function Navbar() {
                     </h2>
                   </div>
 
-                  <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full px-3 py-1 my-4">
+                  <div className="flex items-center bg-gray-100 border-secondary border-2 dark:bg-gray-800 rounded-full px-3 py-1 my-4">
                     <input
                       type="text"
                       placeholder={t("search_placeholder")}
-                      className="bg-transparent border-none outline-none text-sm text-gray-700 dark:text-gray-200 w-full ml-2 rtl:text-right ltr:text-left"
+                      className="bg-transparent border-none  outline-none text-sm text-gray-700 dark:text-gray-200 w-full ml-2 rtl:text-right ltr:text-left"
                     />
-                    <Search className="h-4 w-4 text-gray-500 dark:text-gray-400" />
+                    <Search className="h-4 w-4 text-secondary dark:text-gray-400" />
                   </div>
 
                   <div className="space-y-4 flex-1 overflow-auto py-4">
@@ -275,7 +317,7 @@ export default function Navbar() {
                     </Accordion>
                   </div>
 
-                  <div className="mt-auto border-t py-4">
+                  <div className="mt-auto border-t py-4 flex flex-col gap-3">
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button className="w-full">{t("login")}</Button>
@@ -323,6 +365,56 @@ export default function Navbar() {
                         <DialogFooter>
                           <Button className="w-full" type="submit">
                             {t("login")}
+                          </Button>
+                        </DialogFooter>
+                      </DialogContent>
+                    </Dialog>
+                    {/* Register Button */}
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className=" md:flex bg-secondary hover:bg-secondary/80 text-xl">
+                          {t("register")}
+                          <HeartHandshake
+                            size={40}
+                            strokeWidth={1.75}
+                            className="mX-2 text-2xl"
+                          />
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[425px]">
+                        <DialogHeader>
+                          <DialogTitle>
+                            <h2 className="text-lg font-bold text-gray-900 dark:text-white">
+                              {t("register")}
+                            </h2>
+                          </DialogTitle>
+                          <DialogDescription>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                              {t("register_description")}
+                            </p>
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid gap-4 py-4">
+                          <div className="flex flex-col items-start justify-between gap-4">
+                            <Label htmlFor="username" className="text-right">
+                              {t("username")}
+                            </Label>
+                            <Input id="username" className="col-span-3" />
+                          </div>
+                          <div className="flex flex-col items-start justify-between gap-4">
+                            <Label htmlFor="password" className="text-right">
+                              {t("password")}
+                            </Label>
+                            <Input
+                              id="password"
+                              type="password"
+                              className="col-span-3"
+                            />
+                          </div>
+                        </div>
+                        <DialogFooter>
+                          <Button className="w-full" type="submit">
+                            {t("register")}
                           </Button>
                         </DialogFooter>
                       </DialogContent>

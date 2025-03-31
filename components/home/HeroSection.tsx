@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Youtube, Phone } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Dynamically import the ImageSlider with no SSR
+const ImageSlider = dynamic(() => import("./ImageSlider"), { ssr: false });
 
 const HeroSection = () => {
   const t = useTranslations("home.hero");
@@ -15,16 +18,6 @@ const HeroSection = () => {
 
   useEffect(() => {
     setIsVisible(true);
-
-    const handleParallax = () => {
-      if (heroRef.current) {
-        const scrollY = window.scrollY;
-        heroRef.current.style.backgroundPositionY = `${scrollY * 0.5}px`;
-      }
-    };
-
-    window.addEventListener("scroll", handleParallax);
-    return () => window.removeEventListener("scroll", handleParallax);
   }, []);
 
   // Animation variants
@@ -65,23 +58,14 @@ const HeroSection = () => {
       ref={heroRef}
       className="relative w-full h-[500px] md:h-[600px] overflow-hidden"
     >
-      {/* Background image */}
+      {/* Background with Image Slider */}
       <div className="absolute inset-0 z-0">
+        {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-primary/60 mix-blend-multiply z-20"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/20 z-10"></div>
 
-        {/* Main background image */}
-        <div className="h-full w-full">
-          <Image
-            src="/media/heroBG.png"
-            alt="مبيت ثواب"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-            quality={90}
-            className="w-full h-full"
-          />
-        </div>
+        {/* Image Slider component instead of static Image */}
+        <ImageSlider />
       </div>
 
       {/* Content overlay */}
@@ -103,7 +87,7 @@ const HeroSection = () => {
           {/* Quran verse */}
           <motion.h1
             variants={itemVariants}
-            className="font-extrabold text-white text-2xl md:text-4xl lg:text-5xl leading-tight mb-6 drop-shadow-md"
+            className="font-extrabold text-white text-2xl md:text-3xl lg:text-4xl leading-tight mb-6 drop-shadow-md"
           >
             {t("verse")}
           </motion.h1>
@@ -116,17 +100,15 @@ const HeroSection = () => {
             <Link href="/donate">
               <Button
                 size="lg"
-                variant={"secondary"}
-                className="px-8 py-6 rounded-md font-bold text-lg"
+                className="px-8 py-6 rounded-md font-bold text-lg text-white"
               >
                 {t("donate_button")}
               </Button>
             </Link>
             <Link href="/projects">
               <Button
-                variant="outline"
                 size="lg"
-                className="bg-transparent border-2 border-primary/80 text-white hover:text-white hover:bg-primary/20 px-8 py-6 rounded-md font-bold text-lg"
+                className="bg-transparent border-2 text-secondary border-secondary/80 hover:text-white hover:bg-secondary/20 px-8 py-6 rounded-md font-bold text-lg"
               >
                 {t("browse_projects_button")}
               </Button>
