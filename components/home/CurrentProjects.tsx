@@ -177,7 +177,7 @@ const CurrentProjects = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {filteredProjects.map((project, index) => (
-                <Link href={`/projects/${project.slug}`} key={project.id}>
+                <Link href={`/project/${project.slug}`} key={project.id}>
                   <ProjectCard
                     id={project.id}
                     title={project.title}

@@ -73,6 +73,49 @@
       }
     }
   },
+  "project": {
+    "breadcrumbs": {
+      "home": "Home",
+      "projects": "Projects"
+    },
+    "categories": {
+      "education": "Education",
+      "health": "Health",
+      "water": "Water",
+      "shelter": "Shelter",
+      "food": "Food",
+      "orphans": "Orphans",
+      "emergency": "Emergency Relief"
+    },
+    "location": "Location",
+    "endDate": "End Date",
+    "beneficiaries": "Beneficiaries",
+    "person": "persons",
+    "remainingTime": "Remaining time",
+    "days": "days",
+    "from": "of",
+    "currency": "EGP",
+    "tabs": {
+      "description": "About Project",
+      "updates": "Latest Updates",
+      "donors": "Donors",
+      "gallery": "Photo Gallery"
+    },
+    "noUpdates": "No updates available yet",
+    "noDonors": "No donors yet",
+    "noImages": "No images available",
+    "donationForm": {
+      "title": "Donate Now",
+      "customAmount": "Other Amount",
+      "name": "Name",
+      "email": "Email",
+      "processing": "Processing...",
+      "donate": "Donate Now",
+      "successMessage": "Donation successful, thank you for your support",
+      "taxInfo": "All donations are tax-deductible",
+      "currency": "EGP"
+    }
+  },
   "footer": {
     "all_rights_reserved": "All rights reserved to Wabel",
     "tax_id": "Tax ID",

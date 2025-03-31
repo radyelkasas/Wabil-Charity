@@ -73,6 +73,49 @@
       }
     }
   },
+  "project": {
+    "breadcrumbs": {
+      "home": "الرئيسية",
+      "projects": "المشاريع"
+    },
+    "categories": {
+      "education": "تعليم",
+      "health": "صحة",
+      "water": "مياه",
+      "shelter": "مأوى",
+      "food": "طعام",
+      "orphans": "أيتام",
+      "emergency": "إغاثة عاجلة"
+    },
+    "location": "الموقع",
+    "endDate": "تاريخ الانتهاء",
+    "beneficiaries": "المستفيدين",
+    "person": "شخص",
+    "remainingTime": "متبقي على انتهاء المشروع",
+    "days": "يوم",
+    "from": "من",
+    "currency": "ج.م",
+    "tabs": {
+      "description": "عن المشروع",
+      "updates": "آخر التحديثات",
+      "donors": "المتبرعين",
+      "gallery": "معرض الصور"
+    },
+    "noUpdates": "لا توجد تحديثات حتى الآن",
+    "noDonors": "لا يوجد متبرعين حتى الآن",
+    "noImages": "لا توجد صور متاحة",
+    "donationForm": {
+      "title": "تبرع الآن",
+      "customAmount": "مبلغ آخر",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "processing": "جاري التبرع...",
+      "donate": "تبرع الآن",
+      "successMessage": "تم التبرع بنجاح، شكراً لدعمك",
+      "taxInfo": "جميع التبرعات قابلة للخصم من الضرائب",
+      "currency": "ج.م"
+    }
+  },
   "footer": {
     "all_rights_reserved": "جميع الحقوق محفوظة لموقع وابل",
     "tax_id": "الرقم الضريبي",
