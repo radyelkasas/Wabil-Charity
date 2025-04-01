@@ -21,9 +21,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-
   title,
-  image,
   charityName,
   category,
   targetAmount,
@@ -68,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Project Image */}
       <div className="relative h-56 overflow-hidden rounded-t-2xl">
         <Image
-          src={image}
+          src="/media/food-donation-box.webp"
           alt={title}
           fill
           className="object-cover"
@@ -76,7 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         {/* Category Badge */}
         <div className="absolute bottom-4 right-4 bg-white/90 dark:bg-gray-800/90 px-4 py-1.5 rounded-full text-base font-medium">
-          {t("categories." + category)}
+          {category}
         </div>
       </div>
 

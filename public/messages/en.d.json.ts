@@ -119,6 +119,216 @@ declare const messages: {
       "currency": "EGP"
     }
   },
+  "projects": {
+    "title": "Explore Our Projects",
+    "subtitle": "Browse all charity projects available for donation and support those in need",
+    "searchPlaceholder": "Search for a project...",
+    "filterByCategory": "Filter by category",
+    "sortBy": "Sort by",
+    "resultsFound": "{count} projects found",
+    "clearFilters": "Clear filters",
+    "loadMore": "Load more",
+    "noResults": "No Results Found",
+    "tryAdjustingFilters": "Try adjusting your search criteria to find projects",
+    "categories": {
+      "all": "All Categories",
+      "education": "Education",
+      "water": "Water",
+      "health": "Health",
+      "food": "Food",
+      "shelter": "Shelter"
+    },
+    "sort": {
+      "newest": "Newest",
+      "oldest": "Oldest",
+      "mostFunded": "Most Funded",
+      "leastFunded": "Least Funded",
+      "highestTarget": "Highest Target",
+      "lowestTarget": "Lowest Target"
+    },
+    "charities": {
+      "resala": "Resala Charity",
+      "orman": "Orman Association",
+      "others": "Other Charities"
+    },
+    "mockProjects": {
+      "education": "Educational Support for Remote Areas",
+      "water": "Clean Water for Deprived Villages",
+      "health": "Healthcare Project for Children"
+    },
+    "months": {
+      "ramadan": "Ramadan",
+      "shawwal": "Shawwal",
+      "dhulqaadah": "Dhul-Qa'dah",
+      "dhulhijjah": "Dhul-Hijjah"
+    }
+  },
+  "about": {
+    "breadcrumbs": {
+      "home": "Home",
+      "about": "About Us"
+    },
+    "hero": {
+      "title": "Together We Create a Better Future",
+      "description": "We are a leading charity organization dedicated to improving the lives of those in need across the world. Through our innovative projects and strategic partnerships, we make a lasting positive impact.",
+      "donateButton": "Donate Now",
+      "learnMoreButton": "Learn More",
+      "card": {
+        "title": "Our Impact",
+        "description": "We're changing the lives of millions of people through our diverse projects"
+      }
+    },
+    "mission": {
+      "title": "Our Mission & Vision",
+      "description": "We are committed to improving the lives of those in need by providing sustainable humanitarian and development assistance.",
+      "vision": {
+        "title": "Our Vision",
+        "description": "We envision a world where all individuals have dignity and equal opportunities to thrive regardless of their backgrounds or circumstances."
+      },
+      "goals": {
+        "title": "Our Goals",
+        "goal1": "Provide humanitarian and emergency relief assistance to people affected by crises and disasters.",
+        "goal2": "Implement sustainable development projects that address the root causes of poverty and empower local communities.",
+        "goal3": "Build strategic partnerships with local and international organizations to maximize impact and expand reach."
+      },
+      "card": {
+        "title": "Beneficiaries",
+        "value": "+500K",
+        "description": "people benefited from our projects last year"
+      }
+    },
+    "values": {
+      "title": "Our Values & Principles",
+      "description": "Our values reflect our commitment to transparency, integrity, compassion, and innovation in everything we do.",
+      "integrity": {
+        "title": "Integrity",
+        "description": "We act with honesty, ethics, and responsibility in all our dealings and decisions."
+      },
+      "compassion": {
+        "title": "Compassion",
+        "description": "We provide our services with empathy and respect for the human dignity of beneficiaries."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "We are committed to clarity and accountability in our use of resources and reporting."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We continuously seek creative and sustainable solutions to challenges."
+      }
+    },
+    "stats": {
+      "years": "Years of Experience",
+      "beneficiaries": "Beneficiaries",
+      "projects": "Projects Completed",
+      "countries": "Countries"
+    },
+    "team": {
+      "title": "Management Team",
+      "description": "Our team consists of a diverse group of experts who are specialized and committed to achieving our mission.",
+      "member1": {
+        "name": "Dr. Ahmed Mohamed",
+        "position": "Executive Director"
+      },
+      "member2": {
+        "name": "Eng. Sarah Ahmed",
+        "position": "Project Manager"
+      },
+      "member3": {
+        "name": "Mr. Mohamed Ali",
+        "position": "Financial Director"
+      },
+      "member4": {
+        "name": "Dr. Layla Hassan",
+        "position": "Public Relations Director"
+      }
+    },
+
+    "cta": {
+      "title": "Join Us on the Journey of Change",
+      "description": "You can contribute to making a real difference in the lives of those in need. Donate now or volunteer with us.",
+      "donateButton": "Donate Now",
+      "volunteerButton": "Volunteer With Us"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We welcome your inquiries and feedback. You can reach us through any of the following channels.",
+    "hero": {
+      "title": "Contact Us",
+      "description": "We're here to answer your questions and help with whatever you need. Feel free to reach out through any of the available channels.",
+      "card": {
+        "title": "Customer Service",
+        "description": "Our team is ready to help and support"
+      }
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "contact": "Contact Us"
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent Successfully",
+      "successMessage": "Thank you for contacting us. We will get back to you as soon as possible."
+    },
+    "tabs": {
+      "info": "Contact Info",
+      "location": "Our Location",
+      "hours": "Working Hours"
+    },
+    "info": {
+      "email": {
+        "title": "Email",
+        "description": "Email us directly"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "Call us directly"
+      },
+      "address": {
+        "title": "Address",
+        "street": "123 El Nasr Street",
+        "city": "Cairo 11511",
+        "country": "Arab Republic of Egypt"
+      },
+      "social": {
+        "title": "Follow Us on Social Media"
+      }
+    },
+    "location": {
+      "title": "Visit Our Office",
+      "description": "We welcome you to visit our headquarters to learn more about our team and projects.",
+      "directions": "Get Directions"
+    },
+    "hours": {
+      "title": "Working Hours",
+      "description": "Our official working hours at the headquarters are from Sunday to Thursday.",
+      "workingHours": "9:00 AM - 5:00 PM",
+      "closed": "Closed",
+      "note": "Please schedule an appointment for visits outside of official working hours.",
+      "days": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      }
+    },
+    "map": {
+      "title": "Our Location",
+      "description": "Visit us at our headquarters to learn more about our team and projects.",
+      "getDirections": "Get Directions",
+      "viewLarger": "View Larger Map"
+    }
+  },
   "footer": {
     "all_rights_reserved": "All rights reserved to Wabel",
     "tax_id": "Tax ID",

@@ -49,7 +49,7 @@ const GridContainer = styled.div`
   }
 `;
 
-// Contenedor para cada fila con movimiento infinito
+// Container for each row with infinite movement
 const RowContainer = styled.div`
   position: relative;
   width: 100%;
@@ -57,7 +57,7 @@ const RowContainer = styled.div`
   overflow: hidden;
 `;
 
-// La fila real que contiene las imágenes
+// The actual row containing images
 const Row = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -67,7 +67,7 @@ const Row = styled(motion.div)`
   width: 100%;
 `;
 
-// Duplicado de la fila para crear efecto continuo
+// Duplicate row to create continuous effect
 const RowDuplicate = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -129,7 +129,7 @@ const ImageSlider: React.FC = () => {
   const rowsRef = useRef<Array<HTMLDivElement | null>>([]);
   const rowsDuplicateRef = useRef<Array<HTMLDivElement | null>>([]);
 
-  // Función para renderizar una fila de imágenes
+  // Function to render a row of images
   const renderImageRow = (startIndex: number, imagesPerRow: number) => {
     return Array.from({ length: imagesPerRow }, (_, i) => {
       const imageIndex = (startIndex + i) % imageData.length;
@@ -147,7 +147,7 @@ const ImageSlider: React.FC = () => {
     });
   };
 
-  // Renderiza una fila completa con su duplicado para movimiento infinito
+  // Renders a complete row with its duplicate for infinite movement
   const renderRow = (rowIndex: number) => {
     const imagesPerRow = 8;
     const startImageIndex = (rowIndex * 3) % imageData.length;
@@ -174,34 +174,38 @@ const ImageSlider: React.FC = () => {
     );
   };
 
-  // Configuración y animación
+  // Setup and animation
   useEffect(() => {
     if (!gridRef.current) return;
 
-    // Crear animaciones infinitas para cada fila
+    // Save the current ref values in variables to use in cleanup function
+    const originalRows = [...rowsRef.current];
+    const duplicateRows = [...rowsDuplicateRef.current];
+
+    // Create infinite animations for each row
     const setupInfiniteAnimation = () => {
-      // Para cada fila original
+      // For each original row
       rowsRef.current.forEach((row, index) => {
         if (!row) return;
         const duplicateRow = rowsDuplicateRef.current[index];
         if (!duplicateRow) return;
 
-        // Determinar dirección - filas pares van a la derecha, impares a la izquierda
+        // Determine direction - even rows go right, odd rows go left
         const direction = index % 2 === 0 ? 1 : -1;
 
-        // Velocidades diferentes para cada fila
+        // Different speeds for each row
         const speeds = [60, 80, 50, 70, 65];
         const speed = speeds[index % speeds.length];
 
-        // Posicionar la fila original y su duplicado
+        // Position the original row and its duplicate
         gsap.set(row, { x: 0 });
         gsap.set(duplicateRow, { x: direction < 0 ? "100%" : "-100%" });
 
-        // Crear timeline para animación continua
+        // Create timeline for continuous animation
         const tl = gsap.timeline({ repeat: -1 });
 
         if (direction > 0) {
-          // Movimiento hacia la derecha
+          // Movement to the right
           tl.to(row, { x: "100%", duration: speed, ease: "none" })
             .to(duplicateRow, { x: "0%", duration: speed, ease: "none" }, 0)
             .set(row, { x: "-100%" })
@@ -212,7 +216,7 @@ const ImageSlider: React.FC = () => {
               "-=" + speed
             );
         } else {
-          // Movimiento hacia la izquierda
+          // Movement to the left
           tl.to(row, { x: "-100%", duration: speed, ease: "none" })
             .to(duplicateRow, { x: "0%", duration: speed, ease: "none" }, 0)
             .set(row, { x: "100%" })
@@ -226,12 +230,12 @@ const ImageSlider: React.FC = () => {
       });
     };
 
-    // Iniciar animaciones
+    // Start animations
     setupInfiniteAnimation();
 
-    // Limpieza
+    // Cleanup - using the saved refs
     return () => {
-      gsap.killTweensOf([...rowsRef.current, ...rowsDuplicateRef.current]);
+      gsap.killTweensOf([...originalRows, ...duplicateRows]);
     };
   }, []);
 

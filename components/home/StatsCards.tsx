@@ -5,8 +5,9 @@ import { useTranslations } from "next-intl";
 import { useInView } from "framer-motion";
 import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
-// استيراد مكون LottieIcon بشكل ديناميكي مع تأخير تحميله حتى يصبح مرئيًا
+// Dynamically import LottieIcon component with loading delay until visible
 const LottieIcon = dynamic(() => import("./LottieIcon"), {
   ssr: false,
 });
@@ -46,7 +47,7 @@ const StatCard = ({
         className="mb-3 flex items-center justify-center"
         style={{ minHeight: "60px" }}
       >
-        {/* تحميل الأيقونة فقط عندما تكون في مجال الرؤية */}
+        {/* Only load the icon when in view */}
         {isInView && (
           <LottieIcon
             src={icon}
@@ -128,7 +129,7 @@ const StatsCards = () => {
   const pathname = usePathname();
   const locale = pathname.startsWith("/en") ? "en" : "ar";
 
-  // استخدام useMemo لمنع إعادة إنشاء مصفوفة الإحصائيات عند كل عملية تصيير
+  // Use useMemo to prevent recreating the stats array on each render
   const stats = useMemo(
     () => [
       {
@@ -161,23 +162,38 @@ const StatsCards = () => {
       },
     ],
     [t]
-  ); // إعادة الحساب فقط عندما تتغير الترجمات
+  ); // Only recalculate when translations change
 
   return (
-    <section className="relative -mt-16 z-10 container mx-auto px-4 py-2">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((stat, index) => (
-          <StatCard
-            key={`stat-card-${index}`}
-            icon={stat.icon}
-            number={stat.number}
-            label={stat.label}
-            textLabel={stat.textLabel}
-            color={stat.color}
-            index={index}
-            locale={locale}
-          />
-        ))}
+    <section className="relative">
+      {/* Background image with wave-like pattern */}
+      <div className="absolute -top-10 left-0 w-full h-auto z-0">
+        <Image
+          src="/media/stats-wave-bg.webp"
+          alt="Background pattern"
+          width={1920}
+          height={280}
+          className="w-full object-cover object-top"
+          priority
+        />
+      </div>
+
+      {/* Stats cards container */}
+      <div className="relative -mt-16 z-10 container mx-auto px-4 py-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((stat, index) => (
+            <StatCard
+              key={`stat-card-${index}`}
+              icon={stat.icon}
+              number={stat.number}
+              label={stat.label}
+              textLabel={stat.textLabel}
+              color={stat.color}
+              index={index}
+              locale={locale}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
