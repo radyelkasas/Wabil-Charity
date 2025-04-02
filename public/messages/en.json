@@ -16,7 +16,106 @@
     "password": "Password",
     "menu": "Menu",
     "register": "Donate",
-    "register_description": "Create a new account to access all features."
+    "register_description": "Create a new account to access all features.",
+    "or_continue_with": "Or continue with",
+    "profile": "Profile",
+    "my_donations": "My Donations",
+    "logout": "Logout",
+    "user_account": "User Account"
+  },
+  "profile": {
+    "title": "My Profile",
+    "memberSince": "Member Since",
+    "editProfile": "Edit Profile",
+    "donationHistory": "Donation History",
+    "recentDonations": "Your recent donations",
+    "project": "Project",
+    "currency": "$",
+    "completed": "Completed",
+    "viewAllDonations": "View All Donations"
+  },
+  "settings": {
+    "title": "Settings",
+    "saving": "Saving...",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel",
+    "logoutConfirmTitle": "Confirm Logout",
+    "logoutConfirmMessage": "Are you sure you want to log out of your account?",
+    "logout": "Logout",
+    "tabs": {
+      "profile": "Profile",
+      "security": "Security",
+      "notifications": "Notifications",
+      "payment": "Payment Methods"
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Manage and update your account information",
+      "name": "Name",
+      "email": "Email",
+      "emailCannotChange": "You cannot change the email associated with your account",
+      "phone": "Phone Number",
+      "language": "Language",
+      "selectLanguage": "Select Language",
+      "arabic": "Arabic",
+      "english": "English",
+      "saveSuccess": "Changes saved successfully"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Manage your password and account security settings",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "twoFactorTitle": "Two-Factor Authentication",
+      "twoFactorDescription": "Secure your account with an extra layer of protection",
+      "enableTwoFactor": "Enable Two-Factor Authentication"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Manage your notification and alert preferences",
+      "emailNotifications": "Email Notifications",
+      "emailDescription": "Receive notifications via email",
+      "marketing": "Marketing Messages",
+      "marketingDescription": "Receive updates, offers, and newsletters",
+      "newProjects": "New Projects",
+      "newProjectsDescription": "Notifications about new charity projects",
+      "donationReceipts": "Donation Receipts",
+      "donationReceiptsDescription": "Send receipts for donations"
+    },
+    "payment": {
+      "title": "Payment Methods",
+      "description": "Manage payment methods and donation history",
+      "savedMethods": "Saved Payment Methods",
+      "noSavedMethods": "No saved payment methods",
+      "addMethod": "Add Payment Method",
+      "donationHistory": "Donation History",
+      "recentDonations": "Recent Donations",
+      "viewAll": "View All",
+      "downloadReceipts": "Download Receipts",
+      "viewDonationsDescription": "View all your previous donation history",
+      "viewDonations": "View Donation History"
+    }
+  },
+  "auth": {
+    "welcome": "Welcome",
+    "signInDescription": "Sign in to your account to donate and track your contributions",
+    "signIn": "Sign In",
+    "register": "Register",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password?",
+    "signingIn": "Signing in...",
+    "registering": "Registering...",
+    "orContinueWith": "Or continue with",
+    "termsNote": "By continuing, you agree to our Terms of Service and Privacy Policy",
+    "invalidCredentials": "Invalid credentials",
+    "errorOccurred": "An error occurred",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "loginRequired": "Login Required",
+    "loginToDonateDsc": "You need to login to make a donation"
   },
   "home": {
     "hero": {
@@ -326,9 +425,85 @@
       "viewLarger": "View Larger Map"
     }
   },
+  "my_donations": {
+    "title": "My Donations",
+    "description": "View all your previous donations",
+    "noResults": "No donations yet",
+    "startDonating": "Start Donating",
+    "date": "Date",
+    "amount": "Amount",
+    "project": "Project",
+    "status": "Status",
+    "currency": "EGP",
+    "statuses": {
+      "completed": "Completed",
+      "pending": "Pending",
+      "failed": "Failed"
+    },
+    "searchPlaceholder": "Search donation...",
+    "filterBy": "Filter by",
+    "sortBy": "Sort by",
+    "sort": {
+      "recent": "Most Recent",
+      "oldest": "Oldest",
+      "highest": "Highest Amount",
+      "lowest": "Lowest Amount"
+    },
+    "filters": {
+      "all": "All",
+      "completed": "Completed",
+      "pending": "Pending"
+    },
+    "paginationOf": "of",
+    "results": "results",
+    "viewDetails": "View Details"
+  },
   "footer": {
     "all_rights_reserved": "All rights reserved to Wabel",
     "tax_id": "Tax ID",
-    "site_name": ""
+    "site_name": "Wabel",
+    "about": {
+      "title": "About Us",
+      "description": "Our mission is to help those in need and make a positive impact on communities through charitable projects and initiatives."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About Us",
+      "contact": "Contact",
+      "donate": "Donate"
+    },
+    "contactInfo": {
+      "title": "Contact Us",
+      "phone": "+20 10 1234 5678",
+      "email": "info@wabel.org",
+      "address": "123 Al Nasr St, Cairo, Egypt"
+    },
+    "workingHours": {
+      "title": "Working Hours",
+      "weekdays": "Sun - Thu: 9:00 AM - 5:00 PM",
+      "weekend": "Fri - Sat: Closed"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to our newsletter to receive updates about our projects and initiatives.",
+      "emailPlaceholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "donation": {
+      "title": "Support Our Cause",
+      "description": "Your donation can make a real difference in someone's life.",
+      "button": "Donate Now"
+    },
+    "bottomLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "faq": "FAQ",
+      "sitemap": "Sitemap"
+    },
+    "madeWith": "Made with",
+    "and": "and",
+    "byDeveloper": "by Tafra Team"
   }
 }

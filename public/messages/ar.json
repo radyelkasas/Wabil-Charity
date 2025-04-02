@@ -16,7 +16,106 @@
     "password": "كلمة المرور",
     "menu": "القائمة",
     "register": "تبرع",
-    "register_description": "أنشئ حساباً جديداً للوصول إلى جميع الميزات."
+    "register_description": "أنشئ حساباً جديداً للوصول إلى جميع الميزات.",
+    "or_continue_with": "أو المتابعة باستخدام",
+    "profile": "الملف الشخصي",
+    "my_donations": "تبرعاتي",
+    "logout": "تسجيل الخروج",
+    "user_account": "حساب المستخدم"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "memberSince": "عضو منذ",
+    "editProfile": "تعديل الملف الشخصي",
+    "donationHistory": "سجل التبرعات",
+    "recentDonations": "تبرعاتك الأخيرة",
+    "project": "المشروع",
+    "currency": "ج.م",
+    "completed": "مكتمل",
+    "viewAllDonations": "عرض كل التبرعات"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "saving": "جاري الحفظ...",
+    "saveChanges": "حفظ التغييرات",
+    "cancel": "إلغاء",
+    "logoutConfirmTitle": "تأكيد تسجيل الخروج",
+    "logoutConfirmMessage": "هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟",
+    "logout": "تسجيل الخروج",
+    "tabs": {
+      "profile": "الملف الشخصي",
+      "security": "الأمان",
+      "notifications": "الإشعارات",
+      "payment": "وسائل الدفع"
+    },
+    "profile": {
+      "title": "الملف الشخصي",
+      "description": "إدارة معلومات حسابك وتحديثها",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "emailCannotChange": "لا يمكن تغيير البريد الإلكتروني المرتبط بحسابك",
+      "phone": "رقم الهاتف",
+      "language": "اللغة",
+      "selectLanguage": "اختر اللغة",
+      "arabic": "العربية",
+      "english": "الإنجليزية",
+      "saveSuccess": "تم حفظ التغييرات بنجاح"
+    },
+    "security": {
+      "title": "الأمان",
+      "description": "إدارة كلمة المرور وإعدادات أمان الحساب",
+      "currentPassword": "كلمة المرور الحالية",
+      "newPassword": "كلمة المرور الجديدة",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "twoFactorTitle": "المصادقة الثنائية",
+      "twoFactorDescription": "تأمين حسابك بطبقة إضافية من الحماية",
+      "enableTwoFactor": "تفعيل المصادقة الثنائية"
+    },
+    "notifications": {
+      "title": "إشعارات",
+      "description": "إدارة تفضيلات الإشعارات والتنبيهات",
+      "emailNotifications": "إشعارات البريد الإلكتروني",
+      "emailDescription": "تلقي الإشعارات عبر البريد الإلكتروني",
+      "marketing": "رسائل تسويقية",
+      "marketingDescription": "تلقي تحديثات وعروض ونشرات إخبارية",
+      "newProjects": "مشاريع جديدة",
+      "newProjectsDescription": "إشعارات عن المشاريع الخيرية الجديدة",
+      "donationReceipts": "إيصالات التبرع",
+      "donationReceiptsDescription": "إرسال إيصالات للتبرعات"
+    },
+    "payment": {
+      "title": "وسائل الدفع",
+      "description": "إدارة طرق الدفع وسجل التبرعات",
+      "savedMethods": "طرق الدفع المحفوظة",
+      "noSavedMethods": "لا توجد طرق دفع محفوظة",
+      "addMethod": "إضافة طريقة دفع",
+      "donationHistory": "سجل التبرعات",
+      "recentDonations": "التبرعات الأخيرة",
+      "viewAll": "عرض الكل",
+      "downloadReceipts": "تنزيل الإيصالات",
+      "viewDonationsDescription": "اطلع على سجل جميع تبرعاتك السابقة",
+      "viewDonations": "عرض سجل التبرعات"
+    }
+  },
+  "auth": {
+    "welcome": "مرحباً بك",
+    "signInDescription": "سجّل دخولك لحسابك للتبرع ومتابعة مساهماتك",
+    "signIn": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "username": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "signingIn": "جاري تسجيل الدخول...",
+    "registering": "جاري التسجيل...",
+    "orContinueWith": "أو المتابعة باستخدام",
+    "termsNote": "بالمتابعة، أنت توافق على شروط الخدمة وسياسة الخصوصية",
+    "invalidCredentials": "بيانات اعتماد غير صالحة",
+    "errorOccurred": "حدث خطأ أثناء العملية",
+    "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+    "loginRequired": "تسجيل الدخول مطلوب",
+    "loginToDonateDsc": "يجب عليك تسجيل الدخول للتبرع"
   },
   "home": {
     "hero": {
@@ -326,9 +425,85 @@
       "viewLarger": "عرض خريطة أكبر"
     }
   },
+  "my_donations": {
+    "title": "تبرعاتي",
+    "description": "استعرض جميع تبرعاتك السابقة",
+    "noResults": "لا توجد تبرعات بعد",
+    "startDonating": "ابدأ بالتبرع",
+    "date": "التاريخ",
+    "amount": "المبلغ",
+    "project": "المشروع",
+    "status": "الحالة",
+    "statuses": {
+      "completed": "مكتمل",
+      "pending": "قيد الإجراء",
+      "failed": "فشل"
+    },
+    "currency": "ج.م",
+    "searchPlaceholder": "البحث عن تبرع...",
+    "filterBy": "تصفية حسب",
+    "sortBy": "ترتيب حسب",
+    "sort": {
+      "recent": "الأحدث",
+      "oldest": "الأقدم",
+      "highest": "المبلغ الأعلى",
+      "lowest": "المبلغ الأقل"
+    },
+    "filters": {
+      "all": "الكل",
+      "completed": "مكتمل",
+      "pending": "قيد الإجراء"
+    },
+    "paginationOf": "من",
+    "results": "نتيجة",
+    "viewDetails": "عرض التفاصيل"
+  },
   "footer": {
     "all_rights_reserved": "جميع الحقوق محفوظة لموقع وابل",
     "tax_id": "الرقم الضريبي",
-    "site_name": ""
+    "site_name": "وابل",
+    "about": {
+      "title": "عن الموقع",
+      "description": "مهمتنا هي مساعدة المحتاجين وإحداث تأثير إيجابي على المجتمعات من خلال المشاريع والمبادرات الخيرية."
+    },
+    "quickLinks": {
+      "title": "روابط سريعة",
+      "home": "الرئيسية",
+      "projects": "المشاريع",
+      "about": "من نحن",
+      "contact": "اتصل بنا",
+      "donate": "تبرع"
+    },
+    "contactInfo": {
+      "title": "اتصل بنا",
+      "phone": "+20 10 1234 5678",
+      "email": "info@wabel.org",
+      "address": "123 شارع النصر، القاهرة، مصر"
+    },
+    "workingHours": {
+      "title": "ساعات العمل",
+      "weekdays": "الأحد - الخميس: 9:00 ص - 5:00 م",
+      "weekend": "الجمعة - السبت: مغلق"
+    },
+    "newsletter": {
+      "title": "النشرة البريدية",
+      "description": "اشترك في نشرتنا البريدية لتلقي تحديثات حول مشاريعنا ومبادراتنا.",
+      "emailPlaceholder": "بريدك الإلكتروني",
+      "subscribe": "اشترك"
+    },
+    "donation": {
+      "title": "ادعم قضيتنا",
+      "description": "تبرعك يمكن أن يحدث فرقاً حقيقياً في حياة شخص ما.",
+      "button": "تبرع الآن"
+    },
+    "bottomLinks": {
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة",
+      "faq": "الأسئلة الشائعة",
+      "sitemap": "خريطة الموقع"
+    },
+    "madeWith": "صنع بـ",
+    "and": "و",
+    "byDeveloper": "بواسطة فريق طفرة"
   }
 }

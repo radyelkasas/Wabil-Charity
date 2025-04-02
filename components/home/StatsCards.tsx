@@ -167,7 +167,7 @@ const StatsCards = () => {
   return (
     <section className="relative">
       {/* Background image with wave-like pattern */}
-      <div className="absolute -top-10 left-0 w-full h-auto z-0">
+      <div className="absolute 2xl:-top-10 xl:-top-5 lg:-top-0 md:-top-15 -top-12 left-0 w-full h-auto z-0">
         <Image
           src="/media/stats-wave-bg.webp"
           alt="Background pattern"
@@ -179,7 +179,7 @@ const StatsCards = () => {
       </div>
 
       {/* Stats cards container */}
-      <div className="relative -mt-16 z-10 container mx-auto px-4 py-2">
+      <div className="relative lg:-mt-16 mt-5 z-10 container mx-auto px-4 py-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <StatCard

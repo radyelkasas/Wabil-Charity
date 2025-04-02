@@ -9,7 +9,20 @@ const withNextIntl = createNextIntlPlugin({
 
 const config: NextConfig = {
   images: {
-    domains: ["placehold.co"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.googleusercontent.com",
+      },
+    ],
   },
 
   // Add type checking skip option to bypass the type error during build
