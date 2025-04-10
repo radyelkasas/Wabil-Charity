@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import type { DefaultSession, User } from "next-auth";
+import type { DefaultSession } from "next-auth";
 import type { NextAuthConfig } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";

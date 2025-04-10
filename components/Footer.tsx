@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 import {
   Facebook,
   Instagram,
@@ -24,8 +24,9 @@ const Footer = () => {
   const t = useTranslations("footer");
   const [year, setYear] = useState<number>(2024);
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [mounted, setMounted] = useState<boolean>(false);
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   const footerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(footerRef, { once: true, amount: 0.3 });
@@ -71,7 +72,7 @@ const Footer = () => {
   };
 
   // Determine if dark mode is active
-  const isDark = mounted && theme === "dark";
+  // const isDark = mounted && theme === "dark";
 
   // Social media links with enhanced data
   const socialLinks = [

@@ -4,9 +4,8 @@ import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -80,7 +79,7 @@ const mockDonations = [
 ];
 
 export default function MyDonationsPage() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   const t = useTranslations("my_donations");
   const router = useRouter();
 

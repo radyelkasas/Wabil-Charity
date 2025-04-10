@@ -18,13 +18,14 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { HeartHandshake } from "lucide-react";
+import Link from "next/link";
 
 export default function SignIn() {
   const t = useTranslations("auth");
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/";
-  const error = searchParams.get("error") || "";
+  const errorParam = searchParams.get("error") || "";
 
   const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState("");
@@ -57,9 +58,10 @@ export default function SignIn() {
 
       // Successful login
       router.push(callbackUrl);
-    } catch (error) {
+    } catch (err) {
       setFormError(t("errorOccurred") || "An error occurred during sign in");
       setIsLoading(false);
+      console.error(err);
     }
   };
 
@@ -87,11 +89,12 @@ export default function SignIn() {
         password: registerPassword,
         callbackUrl,
       });
-    } catch (error) {
+    } catch (err) {
       setFormError(
         t("errorOccurred") || "An error occurred during registration"
       );
       setIsLoading(false);
+      console.error(err);
     }
   };
 
@@ -109,11 +112,11 @@ export default function SignIn() {
           </CardDescription>
         </CardHeader>
         <CardContent className="pt-4">
-          {(error || formError) && (
+          {(errorParam || formError) && (
             <Alert variant="destructive" className="mb-4">
               <AlertDescription>
                 {formError ||
-                  t(`errors.${error}`) ||
+                  t(`errors.${errorParam}`) ||
                   t("errorOccurred") ||
                   "An error occurred"}
               </AlertDescription>
@@ -151,11 +154,11 @@ export default function SignIn() {
                     <Label htmlFor="password">
                       {t("password") || "Password"}
                     </Label>
-                    <Button variant="link" className="px-0" asChild>
-                      <a href="/auth/forgot-password">
+                    <Link href="/auth/forgot-password">
+                      <Button variant="link" className="px-0" asChild>
                         {t("forgotPassword") || "Forgot password?"}
-                      </a>
-                    </Button>
+                      </Button>
+                    </Link>
                   </div>
                   <Input
                     id="password"

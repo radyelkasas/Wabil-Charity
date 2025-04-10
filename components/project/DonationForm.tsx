@@ -12,7 +12,6 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -22,7 +21,7 @@ interface DonationFormProps {
   projectId?: string;
 }
 
-const DonationForm: React.FC<DonationFormProps> = ({ projectId }) => {
+const DonationForm: React.FC<DonationFormProps> = () => {
   const t = useTranslations("project.donationForm");
   const { data: session, status } = useSession();
   const [amount, setAmount] = useState<number | null>(null);
